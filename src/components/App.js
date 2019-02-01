@@ -28,12 +28,13 @@ class App extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
   render() {
+    const mobile = this.state.mobile;
     return (
       <div>
-        {this.state.mobile && <MobileNav />}
+        {mobile && <MobileNav />}
         <Row style={{ margin: '1em' }}>
-          {!this.state.mobile && <Sidebar />}
-          <Col>
+          {!mobile && <Sidebar />}
+          <Col xs={!mobile && { offset: 2 }}>
             <Body />
           </Col>
         </Row>

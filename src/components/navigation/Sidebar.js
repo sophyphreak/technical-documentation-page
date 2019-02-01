@@ -5,7 +5,7 @@ import navData from './data/navData';
 export default class Example extends React.Component {
   render() {
     return (
-      <Col sm="2">
+      <Col style={{ position: 'fixed' }} sm="2">
         <p>{navData.header}</p>
         <Nav vertical>
           {navData.list.map((item, index) => (
