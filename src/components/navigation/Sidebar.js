@@ -10,7 +10,7 @@ export default class Example extends React.Component {
         <Nav vertical>
           {navData.list.map((item, index) => (
             <NavItem key={index}>
-              <NavLink href={`#${item}`}>{item}</NavLink>
+              <NavLink href={`#${item.pinyin}`}>{item.char}</NavLink>
             </NavItem>
           ))}
         </Nav>

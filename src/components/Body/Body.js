@@ -7,7 +7,7 @@ const Body = () => (
     <h4>何知闲创作的</h4>
     <h4>Created by Andrew Horn</h4>
     <br />
-    <section id="庄子">
+    <section id="zhuangzi">
       <h3>庄子</h3>
       <p>
         庄子是中国历史上最重要的哲学家。有一些人跟我不同意，但他的
@@ -37,7 +37,7 @@ const Body = () => (
       </ul>
     </section>
     <br />
-    <section id="老子">
+    <section id="laozi">
       <h3>老子</h3>
       <p>老子是中国哲学历史上最重要女的作者</p>
       <p>他最重要的想法包括：</p>
@@ -58,21 +58,21 @@ const Body = () => (
         </li>
       </ul>
     </section>
-    <section id="孔子" />
+    <section id="kongzi" />
     <br />
-    <section id="孟子" />
+    <section id="mengzi" />
     <br />
-    <section id="韩非子" />
+    <section id="hanfeizi" />
     <br />
-    <section id="墨子" />
+    <section id="mozi" />
     <br />
-    <section id="荀子" />
+    <section id="xunzi" />
     <br />
-    <section id="释迦牟尼" />
+    <section id="shijiamouzi" />
     <br />
-    <section id="耶稣" />
+    <section id="yesu" />
     <br />
-    <section id="穆罕默德" />
+    <section id="muhanmode" />
     <br />
   </div>
 );

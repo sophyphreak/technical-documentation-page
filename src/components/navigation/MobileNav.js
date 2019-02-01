@@ -5,7 +5,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Row,
-  NavLink
+  NavLink,
+  Nav
 } from 'reactstrap';
 import navData from './data/navData';
 
@@ -33,23 +34,18 @@ export default class Example extends React.Component {
     };
     return (
       <Row style={rowStyle}>
-        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-          <DropdownToggle caret>{navData.header}</DropdownToggle>
-          <DropdownMenu>
-            {navData.list.map((item, index) => (
-              <DropdownItem key={index}>
-                <NavLink href={`#{item}`}>{item}</NavLink>
-              </DropdownItem>
-            ))}
-            <DropdownItem header />
-            <DropdownItem>Some Action</DropdownItem>
-            <DropdownItem disabled>Action (disabled)</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Foo Action</DropdownItem>
-            <DropdownItem>Bar Action</DropdownItem>
-            <DropdownItem>Quo Action</DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        <Nav>
+          <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+            <DropdownToggle caret>{navData.header}</DropdownToggle>
+            <DropdownMenu>
+              {navData.list.map((item, index) => (
+                <DropdownItem key={index} href={`#${item.pinyin}`}>
+                  {item.char}
+                </DropdownItem>
+              ))}
+            </DropdownMenu>
+          </Dropdown>
+        </Nav>
       </Row>
     );
   }
