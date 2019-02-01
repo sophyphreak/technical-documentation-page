@@ -1,16 +1,14 @@
 import React from 'react';
-import SideBar from './Sidebar';
+import { Row, Col } from 'reactstrap';
+import Sidebar from './Navigation/Sidebar';
 
-import './App.css';
+const App = () => (
+  <Row style={{ margin: '1em' }}>
+    <Col sm="1">
+      <Sidebar />
+    </Col>
+    <Col />
+  </Row>
+);
 
-export default function App() {
-  return (
-    <div id="App">
-      <SideBar />
-      <div id="page-wrap">
-        <h1>AppDividend</h1>
-        <h2>Check out our tutorials the side menubar</h2>
-      </div>
-    </div>
-  );
-}
+export default App;
