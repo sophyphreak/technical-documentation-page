@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: true
+      mobile: window.innerWidth < 500
     };
     this.handleResize = this.handleResize.bind(this);
   }
